@@ -2,14 +2,11 @@ import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage.jsx";
 import CreatePage from "./pages/CreatePage.jsx";
 import PostDetailPage from "./pages/PostDetailPage.jsx";
-import toast from "react-hot-toast"
 
 const App = () => {
   return (
-    <div data-theme="coffee">
-        <button onClick={() => toast.success("Congrats!")} className="text-green-500">Sucess</button>
-        <button onClick={() => toast.error("Whoops!")} className="text-red-500 p-4 bg-pink-300">Error</button>
-        <button className="btn btn-primary">Click Me!</button>
+    <div /*data-theme="coffee"*/ className="relative h-full w-full">
+        <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#FF9DDE40_100%)]" />
         <Routes>
             <Route path="/" element = {<HomePage />} />
             <Route path="/create" element = {<CreatePage />} />
