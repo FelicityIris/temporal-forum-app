@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Pink Gradient -->
+    <linearGradient id="pinkGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7eb3"/>
+      <stop offset="100%" stop-color="#e60073"/>
+    </linearGradient>
+
+    <!-- Purple Gradient -->
+    <linearGradient id="purpleGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Back Bubble (Purple) -->
+  <rect 
+    x="200" 
+    y="180" 
+    width="650" 
+    height="380" 
+    rx="80" 
+    fill="url(#purpleGradient)" 
+  />
+
+  <!-- Purple Text Lines -->
+  <line x1="260" y1="270" x2="720" y2="270" stroke="#c4b5fd" stroke-width="20" stroke-linecap="round"/>
+  <line x1="260" y1="320" x2="680" y2="320" stroke="#c4b5fd" stroke-width="20" stroke-linecap="round"/>
+  <line x1="260" y1="370" x2="750" y2="370" stroke="#c4b5fd" stroke-width="20" stroke-linecap="round"/>
+  <line x1="260" y1="420" x2="630" y2="420" stroke="#c4b5fd" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Front Bubble (Pink) -->
+  <rect 
+    x="120" 
+    y="420" 
+    width="650" 
+    height="380" 
+    rx="80" 
+    fill="url(#pinkGradient)" 
+  />
+
+  <!-- Pink Text Lines -->
+  <line x1="180" y1="510" x2="640" y2="510" stroke="#ffc1e3" stroke-width="20" stroke-linecap="round"/>
+  <line x1="180" y1="560" x2="610" y2="560" stroke="#ffc1e3" stroke-width="20" stroke-linecap="round"/>
+  <line x1="180" y1="610" x2="700" y2="610" stroke="#ffc1e3" stroke-width="20" stroke-linecap="round"/>
+  <line x1="180" y1="660" x2="560" y2="660" stroke="#ffc1e3" stroke-width="20" stroke-linecap="round"/>
+</svg>

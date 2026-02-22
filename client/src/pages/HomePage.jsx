@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
 import RateLimitedUI from "../components/RateLimitedUI";
 import PostCard from "../components/PostCard";
+import PostsNotFound from "../components/PostsNotFound";
 
 const HomePage = () => {
     const [ isRateLimited, setIsRateLimited ] = useState(false);
@@ -43,12 +44,12 @@ const HomePage = () => {
             <div className="max-w-7xl mx-auto p-4 mt-6">
                 { loading && <div className="text-center text-primary py-10">Loading Posts...</div> }
 
+                { posts.length === 0 && !isRateLimited && <PostsNotFound />}
+
                 { posts.length > 0 && !isRateLimited && (
                     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
                         { posts.map(post => (
-                            <div>
-                                <PostCard key={ post._id } post={ post } />
-                            </div>
+                            <PostCard key={ post._id } post={ post } setPosts={ setPosts } />
                         )) }
                     </div>
                 ) }
