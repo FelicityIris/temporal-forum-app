@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../lib/axios";
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
@@ -15,7 +15,7 @@ const HomePage = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get("http://localhost:5050/api/posts");
+                const res = await api.get("/posts");
                 console.log(res.data);
                 setPosts(res.data);
                 setIsRateLimited(false);
