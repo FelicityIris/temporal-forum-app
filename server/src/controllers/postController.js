@@ -40,10 +40,10 @@ export const updatePost = async (req, res) => {
         const updatedPost = await Post.findByIdAndUpdate(
             req.params.id, 
             { title, content },
-            { returnDocument: after, }
+            { new: true, }
         );
 
-        if (!updatePost) return res.status(404).json({ message: "Post not found!" });
+        if (!updatedPost) return res.status(404).json({ message: "Post not found!" });
 
         res.status(200).json({ message: "Post updated successfully!" });
     } catch (error) {
